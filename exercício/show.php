@@ -1,7 +1,4 @@
-<?php session_start(); require_once "ProdutoCrud.php"; require_once "CategoriaCrud.php"; $catCrud = new CategoriaCrud(); require_once "Categoria.php"?>
-
-
-
+<?php session_start(); require_once "ProdutoCrud.php"; require_once "CategoriaCrud.php"; $prodCrud = new ProdutoCrud(); require_once "Produto.php"?>
 
 <!doctype html>
 <html lang="pt-br">
@@ -47,25 +44,21 @@
 
 <table border ="1">
     <tr>
-        <th>Nome Categoria</th>
-        <th>Descricao Categoria</th>
-        <th></th>
-        <th></th>
+        <th>Nome Produto</th>
+        <th>Descricao Produto</th>
+        <th>Preco Produto</th>
 
     </tr>
 
-    <?php $ress= $catCrud->getCategorias();
-    foreach ($ress as $r):{?>
+    <?php $ress= $prodCrud->getProduto($_GET['id']); ?>
+
         <tr>
-            <td><?php echo $r->getNome();?></td>
-            <td><?php echo $r->getDesc();?></td>
-            <td><a href="controladorCategoria.php?rota=editar&id=<?php echo $r->getId();?>"><button>Editar</button></a></td>
-            <td><a href="controladorCategoria.php?rota=excluir&id=<?php echo $r->getId();?>"><button>Excluir</button></a></td>
+            <td><?php echo $ress->getNome();?></td>
+            <td><?php echo $ress->getDesc();?></td>
+            <td><?php echo $ress->getPreco();?></td>
+
         </tr>
-    <?php } endforeach; ?>
-    <tr>
-        <td><a href="controladorCategoria.php?rota=cadastrar"><button>Adicionar Categoria</button></a></td>
-    </tr>
+
 
 </table>
 

@@ -12,12 +12,13 @@ class Produto
     private $id_cat_prod;
 
     public function __construct($id,$nome,$desc,$foto, $preco, $categoria){
-        $this->id = $id;
-        $this->nome = $nome;
-        $this->preco = $preco;
-        $this->id_cat_prod = $categoria;
-        $this->foto = $foto;
-        $this->desc = $desc;
+
+        $this->setId($id);
+        $this->setNome($nome);
+        $this->setPreco($preco);
+        $this->setIdCatProd($categoria);
+        $this->setFoto($foto);
+        $this->setDesc($desc);
     }
 
  //GETTERS

@@ -39,7 +39,8 @@
     <input type="submit" value="Buscar">
 </form>
 
-<a href="controladorCategoria.php?rota=exibir">View</a>
+<a href="controladorCategoria.php?rota=exibir">View Categoria</a>
+<a href="controladorProduto.php?rota=exibir">View Produto</a>
 
 
 </body>
