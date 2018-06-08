@@ -8,9 +8,10 @@ class Conexao
     const USUARIO   = "root";
     const SENHA     = "root";
 
-    //!!!Substitua daqui para baixo
     public static $conexao = null;
     public static function getConexao(){
+
+        //tenta conecta com o BD
 
         try{
             if(self::$conexao == null){
@@ -25,6 +26,5 @@ class Conexao
         }
         return $conexao;
     }
-
 }
 

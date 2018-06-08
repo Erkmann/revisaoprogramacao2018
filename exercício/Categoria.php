@@ -2,15 +2,24 @@
 
 class Categoria
 {
+
+    //atributos
+
     private $id;
     private $nome;
     private $desc;
+
+
+    //construct
 
     public function __construct($id_cat, $nome_cat, $desc_cat){
         $this->id = $id_cat;
         $this->nome = $nome_cat;
         $this->desc = $desc_cat;
     }
+
+
+    //metodos
 
     public function getId()
     {

@@ -14,6 +14,8 @@
 
 <?php
 
+    //verifica se existe a $_SESSION na posicao "usuario"
+
     if (!isset($_SESSION['usuario'])){
     require_once ('login.php');}
 
@@ -33,6 +35,8 @@
     <a href="produtos.php?nome=Esportes&linha=link"><li>ESPORTES</li></a>
     <a href="produtos.php?nome=Roupas&linha=link"><li>ROUPAS</li></a>
 </ul>
+
+<!-- formulario POST com um action que passaq uma rota pela URL -->
 
 <form method="POST" action="produtos.php?linha=post">
     <input type="search" name="BUSCA">

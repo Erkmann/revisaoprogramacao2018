@@ -1,6 +1,7 @@
 <?php
 require_once "CategoriaCrud.php";
 
+    //funcoes
 
     function editar($id, $nome, $desc){
         $c = new CategoriaCrud();
@@ -23,9 +24,12 @@ require_once "CategoriaCrud.php";
 
 
 
+    //rotas
+
+
 
     if ($_GET['rota'] == "editar"){
-        header('location: viewEditar.php?id='.$_GET['id']);
+        header('location: viewEditar.php?id='.$_GET['id']);//redireciona
     }
 
     if ($_GET['rota'] == "cadastrar"){
@@ -33,7 +37,7 @@ require_once "CategoriaCrud.php";
     }
 
     if ($_GET['rota'] == "insert"){
-        cadastrar($_POST['nome'] , $_POST['desc']);
+        cadastrar($_POST['nome'] , $_POST['desc']);//funçao do ṕroprio arquivo
     }
 
     if ($_GET['rota'] == "excluir"){
